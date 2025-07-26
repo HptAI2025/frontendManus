@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { useLanguage } from '@/hooks/useLanguage';
-import hdtLogo from '@assets/Thiết kế chưa có tên_1753485335802.png';
 
 export default function Login() {
   const { t } = useLanguage();
@@ -31,13 +30,12 @@ export default function Login() {
         <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
           {/* Logo and Title */}
           <div className="text-center mb-8">
-            <div className="flex items-center justify-center space-x-3 mb-6">
+            <div className="flex justify-center mb-6">
               <img 
-                src={hdtLogo} 
+                src="/images/logo.png" 
                 alt="HDT AI Logo" 
-                className="w-12 h-12 rounded-lg object-contain"
+                className="w-[150px] h-[150px] rounded-lg object-contain"
               />
-              <span className="text-2xl font-bold text-slate-900">HDT AI</span>
             </div>
             <h1 className="text-3xl font-bold text-slate-900 mb-2">
               Đăng nhập vào tài khoản
