@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
-import hdtLogo from '@assets/Thiết kế chưa có tên_1753485335802.png';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +28,7 @@ export default function Header() {
             {/* Logo trong menu container */}
             <Link href="/" className="flex items-center group whitespace-nowrap flex-shrink-0 mr-4" data-testid="logo-link">
               <img 
-                src={hdtLogo} 
+                src="/images/logo.png" 
                 alt="HDT AI Logo" 
                 className="w-24 h-24 rounded-lg object-contain transition-colors duration-200"
                 style={{width: '100px', height: '100px'}}

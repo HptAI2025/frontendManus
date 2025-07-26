@@ -35,21 +35,21 @@ export default function About() {
     {
       name: 'Hoàng Anh Tú',
       title: t('about.team.hoang_anh_tu.title'),
-      image: '/tu_new.jpg',
+      image: '/images/tu_new.jpg',
       description: t('about.team.hoang_anh_tu.description'),
       linkedin: '#'
     },
     {
       name: 'Hoàng Phú Thịnh',
       title: t('about.team.hoang_phu_thinh.title'),
-      image: '/Avat.png',
+      image: '/images/Avat.png',
       description: t('about.team.hoang_phu_thinh.description'),
       linkedin: '#'
     },
     {
       name: 'Đinh Văn Hiếu',
       title: t('about.team.dinh_van_hieu.title'),
-      image: '/hieudepgiai.jpg',
+      image: '/images/hieudepgiai.jpg',
       description: t('about.team.dinh_van_hieu.description'),
       linkedin: '#'
     }
