@@ -1,0 +1,6 @@
+nohup: ignoring input
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+1:23:28 AM [express] serving on port 5000

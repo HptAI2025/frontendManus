@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'wouter';
 import { useLanguage } from '@/hooks/useLanguage';
 
@@ -7,21 +7,21 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'Tất cả', count: 12 },
-    { id: 'ai-trends', name: 'AI Trends', count: 4 },
-    { id: 'case-study', name: 'Case Study', count: 3 },
-    { id: 'how-to', name: 'Hướng dẫn', count: 3 },
-    { id: 'technology', name: 'Công nghệ', count: 2 }
+    { id: 'all', name: t('blog.categories.all'), count: 12 },
+    { id: 'ai-trends', name: t('blog.categories.aiTrends'), count: 4 },
+    { id: 'case-study', name: t('blog.categories.caseStudy'), count: 3 },
+    { id: 'how-to', name: t('blog.categories.howTo'), count: 3 },
+    { id: 'technology', name: t('blog.categories.technology'), count: 2 }
   ];
 
   const featuredPost = {
     id: 1,
-    title: '5 xu hướng AI sẽ thay đổi kinh doanh năm 2024',
-    excerpt: 'Khám phá những công nghệ AI mới nhất và cách chúng có thể thay đổi cách thức hoạt động của doanh nghiệp trong năm 2024.',
-    category: 'AI Trends',
-    author: 'Nguyễn Văn A',
+    title: t('blog.featured.title'),
+    excerpt: t('blog.featured.excerpt'),
+    category: t('blog.categories.aiTrends'),
+    author: t('blog.featured.author'),
     publishDate: '2024-01-15',
-    readTime: '8 phút đọc',
+    readTime: t('blog.featured.readTime'),
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     featured: true
   };
@@ -29,62 +29,62 @@ export default function Blog() {
   const blogPosts = [
     {
       id: 2,
-      title: 'Câu chuyện thành công: SME tăng doanh thu 200% với AI',
-      excerpt: 'Tìm hiểu cách một doanh nghiệp nhỏ đã sử dụng chatbot AI để tăng doanh thu và cải thiện trải nghiệm khách hàng.',
-      category: 'Case Study',
-      author: 'Trần Thị B',
+      title: t('blog.posts.post1.title'),
+      excerpt: t('blog.posts.post1.excerpt'),
+      category: t('blog.categories.caseStudy'),
+      author: t('blog.posts.post1.author'),
       publishDate: '2024-01-10',
-      readTime: '6 phút đọc',
+      readTime: t('blog.posts.post1.readTime'),
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     },
     {
       id: 3,
-      title: 'Hướng dẫn tự động hóa quy trình với AI cho người mới bắt đầu',
-      excerpt: 'Bước đầu tiên để ứng dụng AI trong doanh nghiệp của bạn. Hướng dẫn chi tiết từ A-Z.',
-      category: 'Hướng dẫn',
-      author: 'Lê Văn C',
+      title: t('blog.posts.post2.title'),
+      excerpt: t('blog.posts.post2.excerpt'),
+      category: t('blog.categories.howTo'),
+      author: t('blog.posts.post2.author'),
       publishDate: '2024-01-08',
-      readTime: '10 phút đọc',
+      readTime: t('blog.posts.post2.readTime'),
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     },
     {
       id: 4,
-      title: 'Machine Learning vs Deep Learning: Sự khác biệt cơ bản',
-      excerpt: 'Hiểu rõ sự khác biệt giữa Machine Learning và Deep Learning để chọn công nghệ phù hợp.',
-      category: 'Công nghệ',
-      author: 'Phạm Thị D',
+      title: t('blog.posts.post3.title'),
+      excerpt: t('blog.posts.post3.excerpt'),
+      category: t('blog.categories.technology'),
+      author: t('blog.posts.post3.author'),
       publishDate: '2024-01-05',
-      readTime: '7 phút đọc',
+      readTime: t('blog.posts.post3.readTime'),
       image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     },
     {
       id: 5,
-      title: 'Chatbot AI: Từ ý tưởng đến triển khai thực tế',
-      excerpt: 'Quy trình phát triển chatbot AI từ khâu lên ý tưởng, thiết kế cho đến triển khai và vận hành.',
-      category: 'Hướng dẫn',
-      author: 'Hoàng Văn E',
+      title: t('blog.posts.post4.title'),
+      excerpt: t('blog.posts.post4.excerpt'),
+      category: t('blog.categories.howTo'),
+      author: t('blog.posts.post4.author'),
       publishDate: '2024-01-03',
-      readTime: '12 phút đọc',
+      readTime: t('blog.posts.post4.readTime'),
       image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     },
     {
       id: 6,
-      title: 'ROI của AI: Cách đo lường hiệu quả đầu tư công nghệ',
-      excerpt: 'Các phương pháp và chỉ số quan trọng để đánh giá hiệu quả đầu tư vào công nghệ AI.',
-      category: 'Case Study',
-      author: 'Nguyễn Thị F',
+      title: t('blog.posts.post5.title'),
+      excerpt: t('blog.posts.post5.excerpt'),
+      category: t('blog.categories.caseStudy'),
+      author: t('blog.posts.post5.author'),
       publishDate: '2024-01-01',
-      readTime: '9 phút đọc',
+      readTime: t('blog.posts.post5.readTime'),
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     },
     {
       id: 7,
-      title: 'Tương lai của AI trong ngành y tế Việt Nam',
-      excerpt: 'Phân tích tiềm năng và thách thức của việc ứng dụng AI trong lĩnh vực y tế tại Việt Nam.',
-      category: 'AI Trends',
-      author: 'Đặng Văn G',
+      title: t('blog.posts.post6.title'),
+      excerpt: t('blog.posts.post6.excerpt'),
+      category: t('blog.categories.aiTrends'),
+      author: t('blog.posts.post6.author'),
       publishDate: '2023-12-28',
-      readTime: '11 phút đọc',
+      readTime: t('blog.posts.post6.readTime'),
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300'
     }
   ];
@@ -99,10 +99,10 @@ export default function Blog() {
       <section className="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-            Insights & Tin tức AI
+            {t('blog.hero.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Cập nhật xu hướng AI mới nhất và kinh nghiệm ứng dụng thực tiễn từ đội ngũ chuyên gia HDT AI
+            {t('blog.hero.description')}
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function Blog() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Bài viết nổi bật</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">{t('blog.featured.sectionTitle')}</h2>
           </div>
           
           <Link href={`/blog/${featuredPost.id}`}>
@@ -129,7 +129,7 @@ export default function Blog() {
                     <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mr-4">
                       {featuredPost.category}
                     </span>
-                    <span className="text-slate-500 text-sm">Nổi bật</span>
+                    <span className="text-slate-500 text-sm">{t('blog.featured.label')}</span>
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900 mb-4 hover:text-blue-600 transition-colors">
                     {featuredPost.title}
@@ -163,7 +163,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Tất cả bài viết</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">{t('blog.allPosts.title')}</h2>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 <button
@@ -218,7 +218,7 @@ export default function Blog() {
                         </div>
                       </div>
                       <span className="text-blue-600 font-semibold hover:text-blue-700 text-sm">
-                        Đọc thêm →
+                        {t('blog.readMore')}
                       </span>
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function Blog() {
           {/* Load More */}
           <div className="text-center mt-12">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors" data-testid="load-more-posts">
-              Tải thêm bài viết
+              {t('blog.loadMore')}
             </button>
           </div>
         </div>
@@ -240,20 +240,20 @@ export default function Blog() {
       <section className="py-24 gradient-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Đăng ký nhận tin tức AI mới nhất
+            {t('blog.newsletter.title')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Nhận những insights về AI và cập nhật sản phẩm mới từ HDT AI
+            {t('blog.newsletter.description')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Nhập email của bạn"
+              placeholder={t('blog.newsletter.placeholder')}
               className="w-full px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
               data-testid="newsletter-email"
             />
             <button className="w-full sm:w-auto bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors whitespace-nowrap" data-testid="newsletter-subscribe">
-              Đăng ký
+              {t('blog.newsletter.subscribe')}
             </button>
           </div>
         </div>

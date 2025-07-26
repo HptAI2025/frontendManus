@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 
 export default function Contact() {
@@ -28,38 +28,38 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: 'fas fa-envelope',
-      title: 'Email',
+      title: t('contact.info.email.title'),
       content: 'contact@hdtai.com',
-      description: 'Gửi email cho chúng tôi bất kỳ lúc nào'
+      description: t('contact.info.email.description')
     },
     {
       icon: 'fas fa-phone',
-      title: 'Điện thoại',
+      title: t('contact.info.phone.title'),
       content: '+84 123 456 789',
-      description: 'Liên hệ trực tiếp trong giờ làm việc'
+      description: t('contact.info.phone.description')
     },
     {
       icon: 'fas fa-map-marker-alt',
-      title: 'Địa chỉ',
-      content: 'Hà Nội, Việt Nam',
-      description: 'Đến thăm văn phòng của chúng tôi'
+      title: t('contact.info.address.title'),
+      content: t('contact.info.address.content'),
+      description: t('contact.info.address.description')
     },
     {
       icon: 'fas fa-clock',
-      title: 'Giờ làm việc',
-      content: '8:00 - 18:00',
-      description: 'Thứ 2 - Thứ 6 (GMT+7)'
+      title: t('contact.info.hours.title'),
+      content: t('contact.info.hours.content'),
+      description: t('contact.info.hours.description')
     }
   ];
 
   const serviceTypes = [
-    { value: 'general', label: 'Tư vấn chung' },
-    { value: 'chatbot', label: 'Chatbot AI' },
-    { value: 'automation', label: 'Tự động hóa quy trình' },
-    { value: 'training', label: 'Đào tạo AI' },
-    { value: 'enterprise', label: 'Giải pháp Enterprise' },
-    { value: 'partnership', label: 'Hợp tác kinh doanh' },
-    { value: 'support', label: 'Hỗ trợ kỹ thuật' }
+    { value: 'general', label: t('contact.form.serviceType.general') },
+    { value: 'chatbot', label: t('contact.form.serviceType.chatbot') },
+    { value: 'automation', label: t('contact.form.serviceType.automation') },
+    { value: 'training', label: t('contact.form.serviceType.training') },
+    { value: 'enterprise', label: t('contact.form.serviceType.enterprise') },
+    { value: 'partnership', label: t('contact.form.serviceType.partnership') },
+    { value: 'support', label: t('contact.form.serviceType.support') }
   ];
 
   return (
@@ -68,10 +68,10 @@ export default function Contact() {
       <section className="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-            Liên hệ với HDT AI
+            {t('contact.hero.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Chúng tôi sẵn sàng hỗ trợ và tư vấn giải pháp AI phù hợp nhất cho doanh nghiệp của bạn
+            {t('contact.hero.description')}
           </p>
         </div>
       </section>
@@ -84,13 +84,13 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <div className="bg-slate-50 rounded-2xl p-8">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                  Gửi tin nhắn cho chúng tôi
+                  {t('contact.form.title')}
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                        Họ và tên *
+                        {t('contact.form.name')}
                       </label>
                       <input
                         type="text"
@@ -106,7 +106,7 @@ export default function Contact() {
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email *
+                        {t('contact.form.email')}
                       </label>
                       <input
                         type="email"
@@ -124,7 +124,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Công ty
+                        {t('contact.form.company')}
                       </label>
                       <input
                         type="text"
@@ -139,7 +139,7 @@ export default function Contact() {
                     
                     <div>
                       <label htmlFor="serviceType" className="block text-sm font-medium text-slate-700 mb-2">
-                        Loại dịch vụ quan tâm
+                        {t('contact.form.serviceTypeLabel')}
                       </label>
                       <select
                         id="serviceType"
@@ -160,7 +160,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                      Chủ đề *
+                      {t('contact.form.subject')}
                     </label>
                     <input
                       type="text"
@@ -176,7 +176,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                      Tin nhắn *
+                      {t('contact.form.message')}
                     </label>
                     <textarea
                       id="message"
@@ -185,7 +185,7 @@ export default function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Mô tả chi tiết nhu cầu của bạn..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                       data-testid="contact-message"
                     ></textarea>
@@ -196,7 +196,7 @@ export default function Contact() {
                     className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
                     data-testid="contact-submit"
                   >
-                    Gửi tin nhắn
+                    {t('contact.form.submit')}
                   </button>
                 </form>
               </div>
@@ -206,7 +206,7 @@ export default function Contact() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                  Thông tin liên hệ
+                  {t('contact.info.title')}
                 </h3>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
@@ -226,7 +226,7 @@ export default function Contact() {
 
               {/* Social Media */}
               <div>
-                <h4 className="font-semibold text-slate-900 mb-4">Theo dõi chúng tôi</h4>
+                <h4 className="font-semibold text-slate-900 mb-4">{t('contact.social.title')}</h4>
                 <div className="flex space-x-4">
                   <a href="#" className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors" data-testid="social-facebook">
                     <i className="fab fa-facebook-f"></i>
@@ -247,10 +247,10 @@ export default function Contact() {
               <div className="bg-green-50 rounded-lg p-6">
                 <div className="flex items-center mb-3">
                   <i className="fas fa-clock text-green-600 mr-2"></i>
-                  <h4 className="font-semibold text-green-900">Thời gian phản hồi</h4>
+                  <h4 className="font-semibold text-green-900">{t('contact.responseTime.title')}</h4>
                 </div>
                 <p className="text-green-800 text-sm">
-                  Chúng tôi cam kết phản hồi trong vòng 24 giờ làm việc. Các trường hợp khẩn cấp sẽ được ưu tiên xử lý.
+                  {t('contact.responseTime.description')}
                 </p>
               </div>
             </div>
@@ -263,47 +263,47 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Câu hỏi thường gặp
+              {t('contact.faq.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Những thông tin bạn có thể cần biết trước khi liên hệ
+              {t('contact.faq.description')}
             </p>
           </div>
 
           <div className="space-y-8">
             <div className="bg-white rounded-lg p-6 shadow-sm" data-testid="faq-1">
               <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                Tôi có cần kiến thức kỹ thuật để sử dụng dịch vụ của HDT AI không?
+                {t('contact.faq.q1.question')}
               </h3>
               <p className="text-slate-600">
-                Không cần thiết. Chúng tôi cung cấp giải pháp AI thân thiện với người dùng và hỗ trợ đầy đủ trong quá trình triển khai và sử dụng.
+                {t('contact.faq.q1.answer')}
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm" data-testid="faq-2">
               <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                Thời gian triển khai một dự án AI thường là bao lâu?
+                {t('contact.faq.q2.question')}
               </h3>
               <p className="text-slate-600">
-                Tùy thuộc vào quy mô và độ phức tạp của dự án. Các giải pháp cơ bản như chatbot có thể triển khai trong 2-4 tuần, dự án phức tạp hơn có thể mất 2-6 tháng.
+                {t('contact.faq.q2.answer')}
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm" data-testid="faq-3">
               <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                HDT AI có hỗ trợ sau khi triển khai không?
+                {t('contact.faq.q3.question')}
               </h3>
               <p className="text-slate-600">
-                Có, chúng tôi cung cấp hỗ trợ kỹ thuật, bảo trì hệ thống và đào tạo người dùng. Các gói dịch vụ khác nhau có mức độ hỗ trợ tương ứng.
+                {t('contact.faq.q3.answer')}
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-sm" data-testid="faq-4">
               <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                Dữ liệu của công ty tôi có được bảo mật không?
+                {t('contact.faq.q4.question')}
               </h3>
               <p className="text-slate-600">
-                Bảo mật dữ liệu là ưu tiên hàng đầu của HDT AI. Chúng tôi tuân thủ các tiêu chuẩn bảo mật quốc tế và ký cam kết bảo mật thông tin với tất cả khách hàng.
+                {t('contact.faq.q4.answer')}
               </p>
             </div>
           </div>
@@ -314,10 +314,10 @@ export default function Contact() {
       <section className="py-24 gradient-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Bắt đầu hành trình AI ngay hôm nay
+            {t('contact.cta.title')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Đội ngũ chuyên gia HDT AI sẵn sàng tư vấn và hỗ trợ bạn
+            {t('contact.cta.description')}
           </p>
           <a
             href="tel:+84123456789"
@@ -325,7 +325,7 @@ export default function Contact() {
             data-testid="contact-phone-cta"
           >
             <i className="fas fa-phone mr-2"></i>
-            Gọi ngay: +84 123 456 789
+            {t('contact.cta.phone')}
           </a>
         </div>
       </section>

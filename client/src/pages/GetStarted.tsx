@@ -31,57 +31,57 @@ export default function GetStarted() {
   });
 
   const companySize = [
-    { value: '1-10', label: '1-10 nhân viên' },
-    { value: '11-50', label: '11-50 nhân viên' },
-    { value: '51-200', label: '51-200 nhân viên' },
-    { value: '201-1000', label: '201-1000 nhân viên' },
-    { value: '1000+', label: 'Hơn 1000 nhân viên' }
+    { value: '1-10', label: t('getStarted.companySize.1-10') },
+    { value: '11-50', label: t('getStarted.companySize.11-50') },
+    { value: '51-200', label: t('getStarted.companySize.51-200') },
+    { value: '201-1000', label: t('getStarted.companySize.201-1000') },
+    { value: '1000+', label: t('getStarted.companySize.1000+') }
   ];
 
   const industries = [
-    { value: 'technology', label: 'Công nghệ' },
-    { value: 'finance', label: 'Tài chính - Ngân hàng' },
-    { value: 'retail', label: 'Bán lẻ - Thương mại' },
-    { value: 'manufacturing', label: 'Sản xuất' },
-    { value: 'healthcare', label: 'Y tế' },
-    { value: 'education', label: 'Giáo dục' },
-    { value: 'real-estate', label: 'Bất động sản' },
-    { value: 'other', label: 'Khác' }
+    { value: 'technology', label: t('getStarted.industry.technology') },
+    { value: 'finance', label: t('getStarted.industry.finance') },
+    { value: 'retail', label: t('getStarted.industry.retail') },
+    { value: 'manufacturing', label: t('getStarted.industry.manufacturing') },
+    { value: 'healthcare', label: t('getStarted.industry.healthcare') },
+    { value: 'education', label: t('getStarted.industry.education') },
+    { value: 'real-estate', label: t('getStarted.industry.real-estate') },
+    { value: 'other', label: t('getStarted.industry.other') }
   ];
 
   const challenges = [
-    { value: 'customer-support', label: 'Hỗ trợ khách hàng chưa hiệu quả' },
-    { value: 'manual-processes', label: 'Quá nhiều quy trình thủ công' },
-    { value: 'data-analysis', label: 'Khó khăn trong phân tích dữ liệu' },
-    { value: 'content-creation', label: 'Tạo nội dung tốn thời gian' },
-    { value: 'lead-generation', label: 'Thiếu khách hàng tiềm năng' },
-    { value: 'cost-optimization', label: 'Cần tối ưu chi phí vận hành' }
+    { value: 'customer-support', label: t('getStarted.challenge.customer-support') },
+    { value: 'manual-processes', label: t('getStarted.challenge.manual-processes') },
+    { value: 'data-analysis', label: t('getStarted.challenge.data-analysis') },
+    { value: 'content-creation', label: t('getStarted.challenge.content-creation') },
+    { value: 'lead-generation', label: t('getStarted.challenge.lead-generation') },
+    { value: 'cost-optimization', label: t('getStarted.challenge.cost-optimization') }
   ];
 
   const services = [
-    { value: 'chatbot', label: 'Chatbot AI thông minh' },
-    { value: 'automation', label: 'Tự động hóa quy trình' },
-    { value: 'content-ai', label: 'Tạo nội dung bằng AI' },
-    { value: 'data-analytics', label: 'Phân tích dữ liệu AI' },
-    { value: 'training', label: 'Đào tạo AI ứng dụng' },
-    { value: 'custom-ai', label: 'Giải pháp AI tùy chỉnh' }
+    { value: 'chatbot', label: t('getStarted.service.chatbot') },
+    { value: 'automation', label: t('getStarted.service.automation') },
+    { value: 'content-ai', label: t('getStarted.service.content-ai') },
+    { value: 'data-analytics', label: t('getStarted.service.data-analytics') },
+    { value: 'training', label: t('getStarted.service.training') },
+    { value: 'custom-ai', label: t('getStarted.service.custom-ai') }
   ];
 
   const budgetRanges = [
-    { value: 'under-5m', label: 'Dưới 5 triệu VNĐ/tháng' },
-    { value: '5m-15m', label: '5-15 triệu VNĐ/tháng' },
-    { value: '15m-30m', label: '15-30 triệu VNĐ/tháng' },
-    { value: '30m-100m', label: '30-100 triệu VNĐ/tháng' },
-    { value: 'over-100m', label: 'Hơn 100 triệu VNĐ/tháng' },
-    { value: 'discuss', label: 'Cần thảo luận thêm' }
+    { value: 'under-5m', label: t('getStarted.budget.under-5m') },
+    { value: '5m-15m', label: t('getStarted.budget.5m-15m') },
+    { value: '15m-30m', label: t('getStarted.budget.15m-30m') },
+    { value: '30m-100m', label: t('getStarted.budget.30m-100m') },
+    { value: 'over-100m', label: t('getStarted.budget.over-100m') },
+    { value: 'discuss', label: t('getStarted.budget.discuss') }
   ];
 
   const timelines = [
-    { value: 'immediate', label: 'Ngay lập tức' },
-    { value: '1-month', label: 'Trong 1 tháng' },
-    { value: '3-months', label: 'Trong 3 tháng' },
-    { value: '6-months', label: 'Trong 6 tháng' },
-    { value: 'planning', label: 'Đang lên kế hoạch' }
+    { value: 'immediate', label: t('getStarted.timeline.immediate') },
+    { value: '1-month', label: t('getStarted.timeline.1-month') },
+    { value: '3-months', label: t('getStarted.timeline.3-months') },
+    { value: '6-months', label: t('getStarted.timeline.6-months') },
+    { value: 'planning', label: t('getStarted.timeline.planning') }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -128,10 +128,10 @@ export default function GetStarted() {
   };
 
   const steps = [
-    { number: 1, title: 'Thông tin cơ bản', icon: 'fas fa-user' },
-    { number: 2, title: 'Nhu cầu kinh doanh', icon: 'fas fa-building' },
-    { number: 3, title: 'Quan tâm về AI', icon: 'fas fa-brain' },
-    { number: 4, title: 'Tạo tài khoản', icon: 'fas fa-check' }
+    { number: 1, title: t('getStarted.step1.title'), icon: 'fas fa-user' },
+    { number: 2, title: t('getStarted.step2.title'), icon: 'fas fa-building' },
+    { number: 3, title: t('getStarted.step3.title'), icon: 'fas fa-brain' },
+    { number: 4, title: t('getStarted.step4.title'), icon: 'fas fa-check' }
   ];
 
   return (
@@ -149,10 +149,10 @@ export default function GetStarted() {
               <span className="text-2xl font-bold text-slate-900">HDT AI</span>
             </div>
             <h1 className="text-4xl font-bold text-slate-900 mb-4">
-              Bắt đầu hành trình AI của bạn
+              {t('getStarted.title')}
             </h1>
             <p className="text-xl text-slate-600">
-              Hãy cho chúng tôi biết về doanh nghiệp để tư vấn giải pháp phù hợp nhất
+              {t('getStarted.subtitle')}
             </p>
           </div>
 
@@ -180,7 +180,9 @@ export default function GetStarted() {
               <h2 className="text-2xl font-bold text-slate-900 mb-2">
                 {steps[currentStep - 1].title}
               </h2>
-              <p className="text-slate-600">Bước {currentStep} / {steps.length}</p>
+              <p className="text-slate-600">
+                {t('getStarted.stepOf', { current: currentStep, total: steps.length })}
+              </p>
             </div>
           </div>
 
@@ -193,7 +195,7 @@ export default function GetStarted() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="fullName" className="block text-sm font-medium text-slate-700 mb-2">
-                        Họ và tên *
+                        {t('getStarted.fullName')} *
                       </label>
                       <input
                         type="text"
@@ -209,7 +211,7 @@ export default function GetStarted() {
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email *
+                        {t('getStarted.email')} *
                       </label>
                       <input
                         type="email"
@@ -227,7 +229,7 @@ export default function GetStarted() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Tên công ty *
+                        {t('getStarted.company')} *
                       </label>
                       <input
                         type="text"
@@ -243,7 +245,7 @@ export default function GetStarted() {
                     
                     <div>
                       <label htmlFor="jobTitle" className="block text-sm font-medium text-slate-700 mb-2">
-                        Chức vụ
+                        {t('getStarted.jobTitle')}
                       </label>
                       <input
                         type="text"
@@ -265,7 +267,7 @@ export default function GetStarted() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="companySize" className="block text-sm font-medium text-slate-700 mb-2">
-                        Quy mô công ty *
+                        {t('getStarted.companySize')} *
                       </label>
                       <select
                         id="companySize"
@@ -276,7 +278,7 @@ export default function GetStarted() {
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                         data-testid="companySize"
                       >
-                        <option value="">Chọn quy mô</option>
+                        <option value="">{t('getStarted.selectCompanySize')}</option>
                         {companySize.map((size) => (
                           <option key={size.value} value={size.value}>
                             {size.label}
@@ -287,7 +289,7 @@ export default function GetStarted() {
                     
                     <div>
                       <label htmlFor="industry" className="block text-sm font-medium text-slate-700 mb-2">
-                        Ngành nghề *
+                        {t('getStarted.industry')} *
                       </label>
                       <select
                         id="industry"
@@ -298,7 +300,7 @@ export default function GetStarted() {
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                         data-testid="industry"
                       >
-                        <option value="">Chọn ngành nghề</option>
+                        <option value="">{t('getStarted.selectIndustry')}</option>
                         {industries.map((industry) => (
                           <option key={industry.value} value={industry.value}>
                             {industry.label}
@@ -310,7 +312,7 @@ export default function GetStarted() {
 
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-4">
-                      Thách thức hiện tại của doanh nghiệp (chọn nhiều) *
+                      {t('getStarted.currentChallenges')} *
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {challenges.map((challenge) => (
@@ -338,7 +340,7 @@ export default function GetStarted() {
                 <div className="space-y-6" data-testid="step-3">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-4">
-                      Dịch vụ AI quan tâm (chọn nhiều) *
+                      {t('getStarted.interestedServices')} *
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {services.map((service) => (
@@ -362,7 +364,7 @@ export default function GetStarted() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="budget" className="block text-sm font-medium text-slate-700 mb-2">
-                        Ngân sách dự kiến *
+                        {t('getStarted.budget')} *
                       </label>
                       <select
                         id="budget"
@@ -373,7 +375,7 @@ export default function GetStarted() {
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                         data-testid="budget"
                       >
-                        <option value="">Chọn mức ngân sách</option>
+                        <option value="">{t('getStarted.selectBudget')}</option>
                         {budgetRanges.map((budget) => (
                           <option key={budget.value} value={budget.value}>
                             {budget.label}
@@ -384,7 +386,7 @@ export default function GetStarted() {
                     
                     <div>
                       <label htmlFor="timeline" className="block text-sm font-medium text-slate-700 mb-2">
-                        Thời gian mong muốn triển khai *
+                        {t('getStarted.timeline')} *
                       </label>
                       <select
                         id="timeline"
@@ -395,7 +397,7 @@ export default function GetStarted() {
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                         data-testid="timeline"
                       >
-                        <option value="">Chọn thời gian</option>
+                        <option value="">{t('getStarted.selectTimeline')}</option>
                         {timelines.map((timeline) => (
                           <option key={timeline.value} value={timeline.value}>
                             {timeline.label}
@@ -413,7 +415,7 @@ export default function GetStarted() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-2">
-                        Mật khẩu *
+                        {t('getStarted.password')} *
                       </label>
                       <input
                         type="password"
@@ -429,7 +431,7 @@ export default function GetStarted() {
                     
                     <div>
                       <label htmlFor="confirmPassword" className="block text-sm font-medium text-slate-700 mb-2">
-                        Xác nhận mật khẩu *
+                        {t('getStarted.confirmPassword')} *
                       </label>
                       <input
                         type="password"
@@ -445,7 +447,7 @@ export default function GetStarted() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="flex items-start">
+                    <div className="flex items-center">
                       <input
                         type="checkbox"
                         id="agreeToTerms"
@@ -453,34 +455,26 @@ export default function GetStarted() {
                         required
                         checked={formData.agreeToTerms}
                         onChange={handleInputChange}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-slate-300 rounded mt-1"
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-slate-300 rounded"
                         data-testid="agreeToTerms"
                       />
                       <label htmlFor="agreeToTerms" className="ml-2 text-slate-700">
-                        Tôi đồng ý với{' '}
-                        <Link href="/terms" className="text-blue-600 hover:text-blue-700">
-                          Điều khoản sử dụng
-                        </Link>{' '}
-                        và{' '}
-                        <Link href="/privacy" className="text-blue-600 hover:text-blue-700">
-                          Chính sách bảo mật
-                        </Link>{' '}
-                        của HDT AI *
+                        {t('getStarted.agreeToTerms')} *
                       </label>
                     </div>
-
-                    <div className="flex items-start">
+                    
+                    <div className="flex items-center">
                       <input
                         type="checkbox"
                         id="subscribeTo"
                         name="subscribeTo"
                         checked={formData.subscribeTo}
                         onChange={handleInputChange}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-slate-300 rounded mt-1"
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-slate-300 rounded"
                         data-testid="subscribeTo"
                       />
                       <label htmlFor="subscribeTo" className="ml-2 text-slate-700">
-                        Tôi muốn nhận tin tức và cập nhật sản phẩm mới từ HDT AI
+                        {t('getStarted.subscribeToNewsletter')}
                       </label>
                     </div>
                   </div>
@@ -488,52 +482,49 @@ export default function GetStarted() {
               )}
 
               {/* Navigation Buttons */}
-              <div className="flex items-center justify-between mt-8 pt-8 border-t border-slate-200">
+              <div className="flex justify-between mt-8">
                 <button
                   type="button"
                   onClick={prevStep}
                   disabled={currentStep === 1}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  className={`px-6 py-3 rounded-lg font-medium ${
                     currentStep === 1
                       ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
                       : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
                   }`}
-                  data-testid="prev-step"
+                  data-testid="prevButton"
                 >
-                  <i className="fas fa-arrow-left mr-2"></i>
-                  Quay lại
+                  {t('getStarted.back')}
                 </button>
-
+                
                 {currentStep < 4 ? (
                   <button
                     type="button"
                     onClick={nextStep}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                    data-testid="next-step"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700"
+                    data-testid="nextButton"
                   >
-                    Tiếp tục
-                    <i className="fas fa-arrow-right ml-2"></i>
+                    {t('getStarted.continue')}
                   </button>
                 ) : (
                   <button
                     type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                    data-testid="submit-registration"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700"
+                    data-testid="submitButton"
                   >
-                    <i className="fas fa-check mr-2"></i>
-                    Tạo tài khoản
+                    {t('getStarted.submit')}
                   </button>
                 )}
               </div>
             </form>
           </div>
 
-          {/* Already have account */}
+          {/* Login Link */}
           <div className="text-center mt-8">
             <p className="text-slate-600">
-              Đã có tài khoản?{' '}
-              <Link href="/login" className="text-blue-600 font-semibold hover:text-blue-700" data-testid="login-link">
-                Đăng nhập ngay
+              {t('getStarted.alreadyHaveAccount')}{' '}
+              <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium">
+                {t('getStarted.loginNow')}
               </Link>
             </p>
           </div>
@@ -542,3 +533,4 @@ export default function GetStarted() {
     </div>
   );
 }
+

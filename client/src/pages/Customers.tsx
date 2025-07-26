@@ -10,53 +10,77 @@ export default function Customers() {
       title: 'CEO, TechCorp Vietnam',
       company: 'TechCorp Vietnam',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
-      quote: 'HDT AI đã giúp chúng tôi tăng hiệu suất bán hàng 300% chỉ sau 3 tháng triển khai chatbot. Khách hàng rất hài lòng với dịch vụ hỗ trợ 24/7.',
+      quote: t('customers.testimonials.nguyen.quote'),
       rating: 5,
-      results: ['300% tăng doanh thu', '70% giảm thời gian phản hồi', '95% hài lòng khách hàng']
+      results: [
+        t('customers.testimonials.nguyen.result1'),
+        t('customers.testimonials.nguyen.result2'),
+        t('customers.testimonials.nguyen.result3')
+      ]
     },
     {
       name: 'Trần Thị B',
       title: 'COO, Digital Solutions',
       company: 'Digital Solutions',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
-      quote: 'Giải pháp tự động hóa của HDT AI đã tiết kiệm cho chúng tôi 40 giờ làm việc mỗi tuần. ROI rất ấn tượng!',
+      quote: t('customers.testimonials.tran.quote'),
       rating: 5,
-      results: ['40 giờ/tuần tiết kiệm', '250% ROI trong 6 tháng', '85% giảm lỗi thủ công']
+      results: [
+        t('customers.testimonials.tran.result1'),
+        t('customers.testimonials.tran.result2'),
+        t('customers.testimonials.tran.result3')
+      ]
     },
     {
       name: 'Lê Văn C',
       title: 'IT Manager, StartupX',
       company: 'StartupX',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
-      quote: 'Đào tạo AI của HDT rất thực tiễn. Nhân viên chúng tôi nhanh chóng thành thạo và áp dụng vào công việc hằng ngày.',
+      quote: t('customers.testimonials.le.quote'),
       rating: 5,
-      results: ['100% nhân viên được đào tạo', '60% tăng năng suất', '90% áp dụng thành công']
+      results: [
+        t('customers.testimonials.le.result1'),
+        t('customers.testimonials.le.result2'),
+        t('customers.testimonials.le.result3')
+      ]
     }
   ];
 
   const caseStudies = [
     {
       company: 'VietBank',
-      industry: 'Ngân hàng',
-      challenge: 'Xử lý khối lượng lớn yêu cầu khách hàng',
-      solution: 'Chatbot AI tư vấn tài chính 24/7',
-      results: ['80% giảm thời gian chờ', '95% độ chính xác', '200% tăng satisfaction'],
+      industry: t('customers.casestudies.vietbank.industry'),
+      challenge: t('customers.casestudies.vietbank.challenge'),
+      solution: t('customers.casestudies.vietbank.solution'),
+      results: [
+        t('customers.casestudies.vietbank.result1'),
+        t('customers.casestudies.vietbank.result2'),
+        t('customers.casestudies.vietbank.result3')
+      ],
       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400'
     },
     {
       company: 'EcommViet',
-      industry: 'Thương mại điện tử',
-      challenge: 'Cá nhân hóa trải nghiệm mua sắm',
-      solution: 'AI recommendation engine và chatbot bán hàng',
-      results: ['150% tăng conversion', '30% tăng AOV', '70% tăng retention'],
+      industry: t('customers.casestudies.ecommviet.industry'),
+      challenge: t('customers.casestudies.ecommviet.challenge'),
+      solution: t('customers.casestudies.ecommviet.solution'),
+      results: [
+        t('customers.casestudies.ecommviet.result1'),
+        t('customers.casestudies.ecommviet.result2'),
+        t('customers.casestudies.ecommviet.result3')
+      ],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400'
     },
     {
       company: 'ManufacturePro',
-      industry: 'Sản xuất',
-      challenge: 'Tối ưu hóa quy trình sản xuất',
-      solution: 'AI predictive maintenance và quality control',
-      results: ['40% giảm downtime', '25% tiết kiệm chi phí', '99.5% quality rate'],
+      industry: t('customers.casestudies.manufacturepro.industry'),
+      challenge: t('customers.casestudies.manufacturepro.challenge'),
+      solution: t('customers.casestudies.manufacturepro.solution'),
+      results: [
+        t('customers.casestudies.manufacturepro.result1'),
+        t('customers.casestudies.manufacturepro.result2'),
+        t('customers.casestudies.manufacturepro.result3')
+      ],
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400'
     }
   ];
@@ -67,29 +91,29 @@ export default function Customers() {
       <section className="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-            Khách hàng nói gì về HDT AI
+            {t('customers.hero.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Hơn 500 doanh nghiệp đã tin tưởng và đạt được kết quả ấn tượng với giải pháp AI của chúng tôi
+            {t('customers.hero.description')}
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center" data-testid="customer-stat-1">
-              <div className="text-4xl font-bold text-blue-600">500+</div>
-              <div className="text-slate-600">Doanh nghiệp tin tưởng</div>
+              <div className="text-4xl font-bold text-blue-600">{t('customers.stats.companies.number')}</div>
+              <div className="text-slate-600">{t('customers.stats.companies.label')}</div>
             </div>
             <div className="text-center" data-testid="customer-stat-2">
-              <div className="text-4xl font-bold text-green-600">98%</div>
-              <div className="text-slate-600">Khách hàng hài lòng</div>
+              <div className="text-4xl font-bold text-green-600">{t('customers.stats.satisfaction.number')}</div>
+              <div className="text-slate-600">{t('customers.stats.satisfaction.label')}</div>
             </div>
             <div className="text-center" data-testid="customer-stat-3">
-              <div className="text-4xl font-bold text-purple-600">300%</div>
-              <div className="text-slate-600">ROI trung bình</div>
+              <div className="text-4xl font-bold text-purple-600">{t('customers.stats.roi.number')}</div>
+              <div className="text-slate-600">{t('customers.stats.roi.label')}</div>
             </div>
             <div className="text-center" data-testid="customer-stat-4">
-              <div className="text-4xl font-bold text-cyan-600">24/7</div>
-              <div className="text-slate-600">Hỗ trợ liên tục</div>
+              <div className="text-4xl font-bold text-cyan-600">{t('customers.stats.support.number')}</div>
+              <div className="text-slate-600">{t('customers.stats.support.label')}</div>
             </div>
           </div>
         </div>
@@ -100,10 +124,10 @@ export default function Customers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Câu chuyện thành công từ khách hàng
+              {t('customers.testimonials.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Những kết quả thực tế mà HDT AI mang lại cho doanh nghiệp
+              {t('customers.testimonials.description')}
             </p>
           </div>
 
@@ -121,7 +145,7 @@ export default function Customers() {
                 
                 {/* Results */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-slate-900 mb-3">Kết quả đạt được:</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">{t('customers.testimonials.results')}:</h4>
                   <ul className="space-y-2">
                     {testimonial.results.map((result, resultIndex) => (
                       <li key={resultIndex} className="flex items-center text-sm">
@@ -155,10 +179,10 @@ export default function Customers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Case Studies chi tiết
+              {t('customers.casestudies.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Tìm hiểu cách HDT AI giải quyết thách thức thực tế của doanh nghiệp
+              {t('customers.casestudies.description')}
             </p>
           </div>
 
@@ -183,17 +207,17 @@ export default function Customers() {
                     
                     <div className="space-y-6">
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Thách thức:</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">{t('customers.casestudies.challenge')}:</h4>
                         <p className="text-slate-600">{study.challenge}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Giải pháp:</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">{t('customers.casestudies.solution')}:</h4>
                         <p className="text-slate-600">{study.solution}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-3">Kết quả:</h4>
+                        <h4 className="font-semibold text-slate-900 mb-3">{t('customers.casestudies.results')}:</h4>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           {study.results.map((result, resultIndex) => (
                             <div key={resultIndex} className="bg-slate-50 rounded-lg p-4 text-center">
@@ -217,23 +241,23 @@ export default function Customers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Phục vụ đa ngành nghề
+              {t('customers.industries.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              HDT AI đã được triển khai thành công tại nhiều lĩnh vực khác nhau
+              {t('customers.industries.description')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
-              { icon: 'fas fa-university', name: 'Ngân hàng & Tài chính', count: '120+' },
-              { icon: 'fas fa-shopping-cart', name: 'Thương mại điện tử', count: '89+' },
-              { icon: 'fas fa-industry', name: 'Sản xuất', count: '75+' },
-              { icon: 'fas fa-graduation-cap', name: 'Giáo dục', count: '65+' },
-              { icon: 'fas fa-heartbeat', name: 'Y tế', count: '45+' },
-              { icon: 'fas fa-car', name: 'Logistics', count: '38+' },
-              { icon: 'fas fa-home', name: 'Bất động sản', count: '32+' },
-              { icon: 'fas fa-utensils', name: 'F&B', count: '28+' }
+              { icon: 'fas fa-university', name: t('customers.industries.banking'), count: '120+' },
+              { icon: 'fas fa-shopping-cart', name: t('customers.industries.ecommerce'), count: '89+' },
+              { icon: 'fas fa-industry', name: t('customers.industries.manufacturing'), count: '75+' },
+              { icon: 'fas fa-graduation-cap', name: t('customers.industries.education'), count: '65+' },
+              { icon: 'fas fa-heartbeat', name: t('customers.industries.healthcare'), count: '45+' },
+              { icon: 'fas fa-car', name: t('customers.industries.logistics'), count: '38+' },
+              { icon: 'fas fa-home', name: t('customers.industries.realestate'), count: '32+' },
+              { icon: 'fas fa-utensils', name: t('customers.industries.fnb'), count: '28+' }
             ].map((industry, index) => (
               <div key={index} className="text-center group" data-testid={`industry-${index + 1}`}>
                 <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
@@ -251,10 +275,10 @@ export default function Customers() {
       <section className="py-24 gradient-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Gia nhập cộng đồng khách hàng HDT AI
+            {t('customers.cta.title')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Cùng hàng trăm doanh nghiệp khác đã chọn HDT AI để chuyển đổi số
+            {t('customers.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -262,14 +286,14 @@ export default function Customers() {
               className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-all hover-lift"
               data-testid="customers-cta-primary"
             >
-              Bắt đầu miễn phí
+              {t('customers.cta.primary')}
             </Link>
             <Link
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
               data-testid="customers-cta-secondary"
             >
-              Liên hệ tư vấn
+              {t('customers.cta.secondary')}
             </Link>
           </div>
         </div>

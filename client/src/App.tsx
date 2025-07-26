@@ -17,6 +17,7 @@ import Customers from "@/pages/Customers";
 import About from "@/pages/About";
 import Careers from "@/pages/Careers";
 import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import Contact from "@/pages/Contact";
 import Docs from "@/pages/Docs";
 import Login from "@/pages/Login";
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/customers" component={Customers} />
       <Route path="/about-us" component={About} />
       <Route path="/careers" component={Careers} />
+      <Route path="/blog/:id" component={BlogPost} />
       <Route path="/blog" component={Blog} />
       <Route path="/contact" component={Contact} />
       <Route path="/docs" component={Docs} />

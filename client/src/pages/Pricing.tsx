@@ -8,54 +8,54 @@ export default function Pricing() {
 
   const plans = [
     {
-      name: 'Gói Cơ bản',
-      description: 'Phù hợp cho startup và SME',
-      monthlyPrice: '5.000.000',
-      annualPrice: '50.000.000',
+      nameKey: 'pricing.basic.name',
+      descriptionKey: 'pricing.basic.description',
+      priceKey: 'pricing.basic.price',
       features: [
-        'Chatbot AI cơ bản',
-        'Tự động hóa 5 quy trình',
-        'Hỗ trợ email',
-        'Báo cáo hằng tháng',
-        '1GB storage',
-        'Tích hợp cơ bản'
+        'pricing.basic.feature1',
+        'pricing.basic.feature2',
+        'pricing.basic.feature3',
+        'pricing.basic.feature4',
+        'pricing.basic.feature5',
+        'pricing.basic.feature6'
       ],
+      ctaKey: 'pricing.basic.cta',
       popular: false,
       testId: 'plan-basic'
     },
     {
-      name: 'Gói Chuyên nghiệp',
-      description: 'Phù hợp cho doanh nghiệp trung bình',
-      monthlyPrice: '15.000.000',
-      annualPrice: '150.000.000',
+      nameKey: 'pricing.pro.name',
+      descriptionKey: 'pricing.pro.description',
+      priceKey: 'pricing.pro.price',
       features: [
-        'Chatbot AI nâng cao',
-        'Tự động hóa không giới hạn',
-        'Tạo nội dung AI',
-        'Phân tích dữ liệu',
-        'Hỗ trợ 24/7',
-        '10GB storage',
-        'API access',
-        'Custom integrations'
+        'pricing.pro.feature1',
+        'pricing.pro.feature2',
+        'pricing.pro.feature3',
+        'pricing.pro.feature4',
+        'pricing.pro.feature5',
+        'pricing.pro.feature6',
+        'pricing.pro.feature7',
+        'pricing.pro.feature8'
       ],
+      ctaKey: 'pricing.pro.cta',
       popular: true,
       testId: 'plan-pro'
     },
     {
-      name: 'Gói Doanh nghiệp',
-      description: 'Giải pháp tùy chỉnh toàn diện',
-      monthlyPrice: 'Liên hệ',
-      annualPrice: 'Liên hệ',
+      nameKey: 'pricing.enterprise.name',
+      descriptionKey: 'pricing.enterprise.description',
+      priceKey: 'pricing.enterprise.price',
       features: [
-        'AI tùy chỉnh hoàn toàn',
-        'Tích hợp hệ thống hiện tại',
-        'Đào tạo onsite',
-        'Dedicated support team',
-        'SLA đảm bảo',
-        'Unlimited storage',
-        'On-premise deployment',
-        'Advanced security'
+        'pricing.enterprise.feature1',
+        'pricing.enterprise.feature2',
+        'pricing.enterprise.feature3',
+        'pricing.enterprise.feature4',
+        'pricing.enterprise.feature5',
+        'pricing.enterprise.feature6',
+        'pricing.enterprise.feature7',
+        'pricing.enterprise.feature8'
       ],
+      ctaKey: 'pricing.enterprise.cta',
       popular: false,
       testId: 'plan-enterprise'
     }
@@ -67,16 +67,16 @@ export default function Pricing() {
       <section className="py-24 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-            Gói dịch vụ phù hợp mọi quy mô
+            {t('pricing.title')}
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Từ startup đến doanh nghiệp lớn, chúng tôi có giải pháp tối ưu cho bạn
+            {t('pricing.subtitle')}
           </p>
 
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mb-12">
             <span className={`mr-3 ${!isAnnual ? 'text-slate-900 font-semibold' : 'text-slate-600'}`}>
-              Hằng tháng
+              {t('pricing.monthly')}
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
@@ -92,7 +92,7 @@ export default function Pricing() {
               />
             </button>
             <span className={`ml-3 ${isAnnual ? 'text-slate-900 font-semibold' : 'text-slate-600'}`}>
-              Hằng năm
+              {t('pricing.annual')}
             </span>
             {isAnnual && (
               <span className="ml-2 bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
@@ -120,51 +120,40 @@ export default function Pricing() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Phổ biến
+                      {t('pricing.popular')}
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{t(plan.nameKey)}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
-                    {plan.monthlyPrice === 'Liên hệ' ? (
-                      <span>Liên hệ</span>
-                    ) : (
-                      <>
-                        <span>
-                          {isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                        </span>
-                        <span className="text-xl text-slate-600 font-normal">
-                          ₫/{isAnnual ? 'năm' : 'tháng'}
-                        </span>
-                      </>
-                    )}
+                    <span>{t(plan.priceKey)}</span>
                   </div>
-                  <p className="text-slate-600">{plan.description}</p>
+                  <p className="text-slate-600">{t(plan.descriptionKey)}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featureKey, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <i className="fas fa-check text-green-500 mr-3"></i>
-                      <span>{feature}</span>
+                      <span>{t(featureKey)}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  href={plan.name === 'Gói Doanh nghiệp' ? '/contact' : '/get-started'}
+                  href={plan.nameKey === 'pricing.enterprise.name' ? '/contact' : '/get-started'}
                   className={`w-full py-3 rounded-lg font-semibold transition-colors text-center block ${
                     plan.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : plan.name === 'Gói Doanh nghiệp'
+                      : plan.nameKey === 'pricing.enterprise.name'
                       ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
                       : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
                   }`}
                   data-testid={`${plan.testId}-cta`}
                 >
-                  {plan.name === 'Gói Doanh nghiệp' ? 'Liên hệ tư vấn' : `Chọn ${plan.name.toLowerCase()}`}
+                  {t(plan.ctaKey)}
                 </Link>
               </div>
             ))}
@@ -177,10 +166,10 @@ export default function Pricing() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Câu hỏi thường gặp
+              {t('pricing.faq.title')}
             </h2>
             <p className="text-xl text-slate-600">
-              Những thông tin bạn cần biết về dịch vụ HDT AI
+              {t('pricing.faq.subtitle')}
             </p>
           </div>
 
@@ -238,10 +227,11 @@ export default function Pricing() {
             className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-all hover-lift"
             data-testid="pricing-final-cta"
           >
-            Bắt đầu dùng thử miễn phí
+            {t('common.getStarted')}
           </Link>
         </div>
       </section>
     </div>
   );
 }
+
