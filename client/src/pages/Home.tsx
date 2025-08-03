@@ -190,7 +190,7 @@ export default function Home() {
                         </div>
                         <div>
                           <div className="text-white/90 text-sm font-medium">HDT AI • 4:05 PM</div>
-                          <div className="text-white/70 text-sm">@Sisa of course! Creating a session and making the changes. See here.</div>
+                          <div className="text-white/70 text-sm">@Sisa of course! Creating a session and making the changes. <a href="https://youtu.be/KUsnOibtiWQ?si=5GsW1MxggQ7T4qNY" target="_blank" rel="noopener noreferrer" className="text-[#4A90E2] hover:text-[#00D4FF] underline transition-colors duration-200">See here</a>.</div>
                         </div>
                       </div>
                     </div>
