@@ -11,12 +11,9 @@ export default function Header() {
   const navItems = [
     { href: '/', label: t('nav.home') },
     { href: '/enterprise', label: t('nav.enterprise') },
-    { href: '/pricing', label: t('nav.pricing') },
     { href: '/customers', label: t('nav.customers') },
     { href: '/about-us', label: t('nav.about') },
     { href: '/contact', label: t('nav.contact') },
-    { href: '/blog', label: t('nav.blog') },
-    { href: '/docs', label: t('nav.docs') },
   ];
 
   return (
