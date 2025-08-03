@@ -146,14 +146,9 @@ export default function Home() {
             {/* Right side - YouTube Video */}
             <div className="relative">
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl shadow-blue-500/10 overflow-hidden">
-                <div className="flex items-center space-x-2 p-4 bg-black/20">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
-                    className="absolute top-0 left-0 w-full h-full"
+                    className="absolute top-0 left-0 w-full h-full rounded-2xl"
                     src="https://www.youtube.com/embed/KUsnOibtiWQ?si=5GsW1MxggQ7T4qNY"
                     title="Hướng dẫn đăng ký khóa học HDT AI"
                     frameBorder="0"
