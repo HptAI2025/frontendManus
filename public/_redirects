@@ -1,0 +1,8 @@
+/customers    /index.html   200
+/about-us     /index.html   200
+/get-started  /index.html   200
+/login        /index.html   200
+/contact      /index.html   200
+/blog         /index.html   200
+/blog/*       /index.html   200
+
