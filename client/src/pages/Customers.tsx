@@ -6,10 +6,10 @@ export default function Customers() {
 
   const testimonials = [
     {
-      name: 'Nguyễn Văn A',
-      title: 'CEO, TechCorp Vietnam',
-      company: 'TechCorp Vietnam',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
+      name: 'Phạm Minh Tuấn',
+      title: 'CEO, VietTech Solutions',
+      company: 'VietTech Solutions',
+      image: '/images/customer1.jpg',
       quote: t('customers.testimonials.nguyen.quote'),
       rating: 5,
       results: [
@@ -19,10 +19,10 @@ export default function Customers() {
       ]
     },
     {
-      name: 'Trần Thị B',
-      title: 'COO, Digital Solutions',
-      company: 'Digital Solutions',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
+      name: 'Nguyễn Thị Lan Anh',
+      title: 'COO, Digital Innovation Hub',
+      company: 'Digital Innovation Hub',
+      image: '/images/customer2.jpg',
       quote: t('customers.testimonials.tran.quote'),
       rating: 5,
       results: [
@@ -32,10 +32,10 @@ export default function Customers() {
       ]
     },
     {
-      name: 'Lê Văn C',
-      title: 'IT Manager, StartupX',
-      company: 'StartupX',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100',
+      name: 'Trần Đức Hải',
+      title: 'IT Director, SmartViet Corp',
+      company: 'SmartViet Corp',
+      image: '/images/customer3.jpg',
       quote: t('customers.testimonials.le.quote'),
       rating: 5,
       results: [
