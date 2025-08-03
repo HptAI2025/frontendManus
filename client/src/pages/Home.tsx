@@ -143,7 +143,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right side - Enhanced Interface mockup */}
+            {/* Right side - YouTube Video */}
             <div className="relative">
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl shadow-blue-500/10">
                 <div className="flex items-center space-x-2 mb-4">
@@ -151,50 +151,15 @@ export default function Home() {
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="bg-[#1a2332]/80 backdrop-blur-sm rounded-lg p-4 border border-white/5">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <div className="w-6 h-6 bg-gradient-to-r from-[#4A90E2] to-[#00D4FF] rounded flex items-center justify-center shadow-sm">
-                      <span className="text-white text-xs font-bold">S</span>
-                    </div>
-                    <span className="text-white text-sm font-medium">Slack</span>
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-purple-500 rounded flex items-center justify-center ml-auto shadow-sm">
-                      <span className="text-white text-xs font-bold">L</span>
-                    </div>
-                    <span className="text-white text-sm font-medium">Linear</span>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="bg-white/5 rounded-lg p-3 border border-white/5">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                        <span className="text-white/90 text-sm font-medium">frontend</span>
-                        <span className="text-white/60 text-xs">Frontend development & bug fixes</span>
-                      </div>
-                      <div className="text-white/80 text-sm">+ Add channels</div>
-                    </div>
-                    <div className="text-center">
-                      <span className="text-white/60 text-sm">Today ▼</span>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-sm">
-                          <span className="text-white text-xs font-bold">S</span>
-                        </div>
-                        <div>
-                          <div className="text-white/90 text-sm font-medium">Sisa • 4:05 PM</div>
-                          <div className="text-white/70 text-sm">@HDT AI can you make the knowledge fields always editable?</div>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-[#4A90E2] to-[#00D4FF] rounded-full flex items-center justify-center shadow-sm">
-                          <span className="text-white text-xs font-bold">AI</span>
-                        </div>
-                        <div>
-                          <div className="text-white/90 text-sm font-medium">HDT AI • 4:05 PM</div>
-                          <div className="text-white/70 text-sm">@Sisa of course! Creating a session and making the changes. <a href="https://youtu.be/KUsnOibtiWQ?si=5GsW1MxggQ7T4qNY" target="_blank" rel="noopener noreferrer" className="text-[#4A90E2] hover:text-[#00D4FF] underline transition-colors duration-200">See here</a>.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    src="https://www.youtube.com/embed/KUsnOibtiWQ?si=5GsW1MxggQ7T4qNY"
+                    title="Hướng dẫn đăng ký khóa học HDT AI"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>
